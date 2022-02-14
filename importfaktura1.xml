@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InvoiceImportRequest>
+	<IntegratorId>{{IntegratorId}}</IntegratorId>
+	<RequestId>{{$guid}}</RequestId>
+	<Payload>
+		<IsExportable>true</IsExportable>
+		<Invoice>
+		<E_Invoice>
+	<Header>
+		<Test>NO</Test>
+		<Date>2022-02-14</Date>
+		<FileId>14022022</FileId>
+		<Version>1.1</Version>
+	</Header>
+	<Invoice regNumber="21134040" invoiceId="IF2299" sellerRegnumber="11223322">
+		<InvoiceParties>
+			<SellerParty>
+				<Name>Unifiedpost Solution</Name>
+				<RegNumber>11223322</RegNumber>
+			</SellerParty>
+			<BuyerParty>
+				<Name>BGD Company</Name>
+				<RegNumber>21134040</RegNumber>
+			</BuyerParty>
+		</InvoiceParties>
+		<InvoiceInformation>
+			<Type type="DEB">
+				<SourceInvoice>ucitanoAPI V3</SourceInvoice>
+			</Type>
+			<FactorContractNumber>Ugovor</FactorContractNumber>
+			<ContractNumber>120</ContractNumber>
+			<DocumentName>eInvoice121</DocumentName>
+			<InvoiceNumber>IF2999</InvoiceNumber>
+			<InvoiceContentCode>SPO5</InvoiceContentCode>
+			<InvoiceContentText>Teenused</InvoiceContentText>
+			<PaymentReferenceNumber>IF2299or9</PaymentReferenceNumber>
+			<PaymentMethod>Virman</PaymentMethod>
+			<InvoiceDate>2022-02-14</InvoiceDate>
+			<DueDate>2022-03-30</DueDate>
+			<PaymentTerm>Termin plaćanja1</PaymentTerm>
+			<FineRatePerDay>0.2</FineRatePerDay>
+			<Period>
+				<PeriodName>naziv perioda plaćanja</PeriodName>
+				<StartDate>2022-02-14</StartDate>
+				<EndDate>2022-03-30</EndDate>
+			</Period>
+			<InvoiceDeliverer>
+				<ContactName>Dragan Stajić</ContactName>
+			</InvoiceDeliverer>
+			<Extension extensionId="VariableSymbol">
+				<InformationName>Variable Symbol</InformationName>
+				<InformationContent>2017105</InformationContent>
+			</Extension>
+			<Extension extensionId="DateOfTaxDuty">
+				<InformationName>Date Of Tax Duty</InformationName>
+				<InformationContent>2022-03-30</InformationContent>
+			</Extension>
+			<Extension extensionId="SpecificSymbol">
+				<InformationName>Specifična oznaka</InformationName>
+				<InformationContent>2017109</InformationContent>
+			</Extension>
+			<Extension extensionId="ConstantSymbol">
+				<InformationName>Constant Symbol</InformationName>
+				<InformationContent>1234</InformationContent>
+			</Extension>
+			<Extension extensionId="Reference">
+				<InformationName>Referenca</InformationName>
+				<InformationContent>1234 Text</InformationContent>
+			</Extension>
+			<Extension extensionId="DocumentType">
+				<InformationName>Vladimir Test</InformationName>
+				<InformationContent>predracun</InformationContent>
+			</Extension>
+		</InvoiceInformation>
+		<InvoiceSumGroup>
+			<InvoiceSum>6000.00</InvoiceSum>
+			<Rounding>0.0001</Rounding>
+			<VAT vatId="TAX">
+				<SumBeforeVAT>3000.00</SumBeforeVAT>
+				<VATRate>20</VATRate>
+				<VATSum>600.00</VATSum>
+				<Currency>RSD</Currency>
+				<SumAfterVAT>3600.00</SumAfterVAT>
+			</VAT>
+			<VAT vatId="TAX">
+				<SumBeforeVAT>1000</SumBeforeVAT>
+				<VATRate>10</VATRate>
+				<VATSum>100.00</VATSum>
+				<Currency>RSD</Currency>
+				<SumAfterVAT>1100.00</SumAfterVAT>
+			</VAT>
+			<VAT vatId="TAX">
+				<SumBeforeVAT>1300.00</SumBeforeVAT>
+				<VATRate>0</VATRate>
+				<VATSum>0.0000</VATSum>
+				<Currency>RSD</Currency>
+				<SumAfterVAT>1300.00</SumAfterVAT>
+			</VAT>
+			<TotalVATSum>700</TotalVATSum>
+			<TotalSum>6000</TotalSum>
+			<Currency>RSD</Currency>
+		</InvoiceSumGroup>
+		<InvoiceItem>
+			<InvoiceItemGroup>
+				<ItemEntry>
+					<SerialNumber>Serial01</SerialNumber>
+					<SellerProductId>SellerId01</SellerProductId>
+					<BuyerProductId>Artikal</BuyerProductId>
+					<TaricCode>A001</TaricCode>
+					<CustomerRef>CustomerRef01</CustomerRef>
+					<Description>Red br 1</Description>
+					<EAN>3272513030701</EAN>
+					<ItemReserve extensionId="Should NOT see this!">
+						<InformationName>1 - Artprvided</InformationName>
+						<InformationContent>1 - ekstenzija - should see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="">
+						<InformationName>2 - Should see this</InformationName>
+						<InformationContent>2 - ext - should see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="3 - Should see this!">
+						<InformationName></InformationName>
+						<InformationContent>3 - ext - should see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve>
+						<InformationName>4 - Should see this</InformationName>
+						<InformationContent>4 - ext - should see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="5 - Should see this!">
+						<InformationContent>5 - ext - should see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="">
+						<InformationContent>6 - ext - should NOT see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve>
+						<InformationName></InformationName>
+						<InformationContent>7 - ext - should NOT see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="">
+						<InformationName></InformationName>
+						<InformationContent>8 - ext - should NOT see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve>
+						<InformationContent>9 - ext - should NOT see this</InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="Should NOT see this!">
+						<InformationName>10 - Should NOT see this</InformationName>
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="">
+						<InformationName>11 - Should NOT see this</InformationName>
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="Should NOT see this!">
+						<InformationName></InformationName>
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemReserve>
+						<InformationName>13 - Should NOT see this</InformationName>
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="Should NOT see this!">
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="">
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemReserve>
+						<InformationName></InformationName>
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemReserve extensionId="">
+						<InformationName></InformationName>
+						<InformationContent></InformationContent>
+					</ItemReserve>
+					<ItemDetailInfo>
+						<ItemUnit>kom</ItemUnit>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20</VATSum>
+					</VAT>
+					<ItemTotal>120</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<SerialNumber>Serial02</SerialNumber>
+					<SellerProductId>SellerId02</SellerProductId>
+					<BuyerProductId>BuyerId02</BuyerProductId>
+					<TaricCode>CODECODE02</TaricCode>
+					<CustomerRef>CustomerRef02</CustomerRef>
+					<Description>This is row number 2</Description>
+					<EAN>3272513030702</EAN>
+					<ItemDetailInfo>
+					<ItemUnit>Should NOT see this!</ItemUnit>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<SerialNumber>Serial01</SerialNumber>
+					<SellerProductId>SellerId01</SellerProductId>
+					<BuyerProductId>BuyerId01</BuyerProductId>
+					<TaricCode>CODECODE01</TaricCode>
+					<CustomerRef>CustomerRef01</CustomerRef>
+					<Description>This is row number 3</Description>
+					<EAN>3272513030703</EAN>
+					<ItemDetailInfo>
+						<ItemUnit>litar</ItemUnit>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<SerialNumber>Serial02</SerialNumber>
+					<SellerProductId>SellerId02</SellerProductId>
+					<BuyerProductId>BuyerId02</BuyerProductId>
+					<TaricCode>CODECODE02</TaricCode>
+					<CustomerRef>CustomerRef02</CustomerRef>
+					<Description>This is row number 4</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20</VATSum>
+					</VAT>
+					<ItemTotal>120</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 5</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20</VATSum>
+					</VAT>
+					<ItemTotal>120</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 6</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>650</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>650</ItemSum>
+					<VAT>
+						<SumBeforeVAT>650</SumBeforeVAT>
+						<VATRate>0</VATRate>
+						<VATSum>0.0000</VATSum>
+					</VAT>
+					<ItemTotal>650.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 7</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 8</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>500.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>500.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>500.00</SumBeforeVAT>
+						<VATRate>10</VATRate>
+						<VATSum>50.00</VATSum>
+					</VAT>
+					<ItemTotal>550.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 9</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 10</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 11</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 12</Description>
+					<ItemDetailInfo>
+						<ItemAmount>2</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>200.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>200.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>40.00</VATSum>
+					</VAT>
+					<ItemTotal>240.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 13</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 14</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 15</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 16</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 17</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 18</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 19</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 20</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 21</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 22</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>650.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>065.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>650.00</SumBeforeVAT>
+						<VATRate>0</VATRate>
+						<VATSum>0.0000</VATSum>
+					</VAT>
+					<ItemTotal>650.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 23</Description>
+					<ItemDetailInfo>
+						<ItemAmount>2</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>200.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>200.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>40.00</VATSum>
+					</VAT>
+					<ItemTotal>240.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 24</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 25</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 26</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 27</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>500.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>500.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>500.00</SumBeforeVAT>
+						<VATRate>10</VATRate>
+						<VATSum>50.00</VATSum>
+					</VAT>
+					<ItemTotal>550.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 28</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 29</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 30</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 31</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 32</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+				<ItemEntry>
+					<Description>This is row number 33</Description>
+					<ItemDetailInfo>
+						<ItemAmount>1</ItemAmount>
+						<ItemPrice>100.00</ItemPrice>
+					</ItemDetailInfo>
+					<ItemSum>100.00</ItemSum>
+					<VAT>
+						<SumBeforeVAT>100.00</SumBeforeVAT>
+						<VATRate>20</VATRate>
+						<VATSum>20.00</VATSum>
+					</VAT>
+					<ItemTotal>120.00</ItemTotal>
+				</ItemEntry>
+			</InvoiceItemGroup>
+		</InvoiceItem>
+		<PaymentInfo>
+			<Currency>RSD</Currency>
+			<PaymentDescription>Payment description</PaymentDescription><Payable>YES</Payable>
+			<PayDueDate>2022-03-30</PayDueDate>
+			<PaymentTotalSum>6000.00</PaymentTotalSum>
+			<PayerName>BGD Company</PayerName>
+			<PaymentId>P27</PaymentId>
+			<PayToAccount>381200221020145685</PayToAccount>
+			<PayToName>Unifiedppst Company</PayToName>
+		</PaymentInfo>
+	</Invoice>
+	<Footer>
+		<TotalNumberInvoices>1</TotalNumberInvoices>
+		<TotalAmount>6000.00</TotalAmount>
+	</Footer>
+</E_Invoice>
+		</Invoice>
+	</Payload>
+</InvoiceImportRequest>
